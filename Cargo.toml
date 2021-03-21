@@ -1,0 +1,13 @@
+[package]
+name = "imeonoff"
+version = "0.1.0"
+authors = ["Regen <regen100@users.noreply.github.com>"]
+edition = "2018"
+repository = "https://github.com/regen100/imeonoff"
+
+[dependencies]
+getopts = "0.2"
+windows = "0.5"
+
+[build-dependencies]
+windows = "0.5"
