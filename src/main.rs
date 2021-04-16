@@ -8,10 +8,10 @@ mod bindings {
 }
 
 use bindings::{
-    windows::win32::intl::ImmGetDefaultIMEWnd,
-    windows::win32::windows_and_messaging::GetForegroundWindow,
-    windows::win32::windows_and_messaging::SendMessageA,
-    windows::win32::windows_and_messaging::{LPARAM, WPARAM},
+    Windows::Win32::Intl::ImmGetDefaultIMEWnd,
+    Windows::Win32::WindowsAndMessaging::GetForegroundWindow,
+    Windows::Win32::WindowsAndMessaging::SendMessageA,
+    Windows::Win32::WindowsAndMessaging::{LPARAM, WPARAM},
 };
 
 const WM_IME_CONTROL: u32 = 0x283;
@@ -25,7 +25,8 @@ fn main() {
     let matches = match opts.parse(&args[1..]) {
         Ok(m) => m,
         Err(f) => {
-            panic!(f.to_string())
+            eprintln!("{}", f.to_string());
+            std::process::exit(1);
         }
     };
     let set: Option<isize> = matches.opt_str("s").map(|x| x.parse().unwrap());
