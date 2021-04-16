@@ -7,7 +7,7 @@ repository = "https://github.com/regen100/imeonoff"
 
 [dependencies]
 getopts = "0.2"
-windows = "0.5"
+windows = "0.8"
 
 [build-dependencies]
-windows = "0.5"
+windows = "0.8"
